@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kal-a-shiyaana — Art from the hands that made it</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&family=Chivo:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EFE7;--bg2:#EAE2D5;--ink:#1E1B18;--mute:#7B7167;--line:#D8CEBF;--acc:#A94F33;--on:#F4EFE7;
+--serif:'Fraunces','Iowan Old Style',Georgia,serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17140F;--bg2:#221E18;--ink:#EFE8DC;--mute:#9C9184;--line:#3A332A;--acc:#D9825F;--on:#17140F}}
+:root[data-theme="dark"]{--bg:#17140F;--bg2:#221E18;--ink:#EFE8DC;--mute:#9C9184;--line:#3A332A;--acc:#D9825F;--on:#17140F}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;cursor:pointer}button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+.w{max-width:1280px;margin:0 auto;padding:0 32px}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;line-height:1.05}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:24px;letter-spacing:-.03em}.logo i{color:var(--acc)}
+.links{display:flex;gap:32px;align-items:center}.links a{font-size:13px;letter-spacing:.04em;padding:4px 0;border-bottom:1px solid transparent}
+.links a:hover,.links a.on{border-color:var(--ink)}
+.cartb{display:flex;gap:8px;align-items:center;font-size:13px}.cartb b{background:var(--ink);color:var(--on);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:11px;font-weight:500}
+.burger{display:none;font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:var(--on);padding:15px 28px;font-size:13px;letter-spacing:.06em;border-radius:0;transition:.25s}
+.btn:hover{background:var(--acc)}.btn.o{background:none;color:var(--ink);border:1px solid var(--ink)}.btn.o:hover{background:var(--ink);color:var(--on)}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.ul{border-bottom:1px solid var(--ink);padding-bottom:2px;font-size:13px;letter-spacing:.04em;transition:.2s}.ul:hover{color:var(--acc);border-color:var(--acc)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;padding:72px 0 96px;align-items:end}
+.hero h1{font-size:clamp(52px,8vw,120px)}.hero h1 em{color:var(--acc);font-style:italic}
+.hero p{max-width:420px;color:var(--mute);margin:32px 0 36px;font-size:16px}
+.hc{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.hc>:nth-child(2){margin-top:64px}
+.sec{padding:80px 0;border-top:1px solid var(--line)}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;gap:20px}.sh h2{font-size:clamp(34px,4.5vw,56px)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px}.grid.g4{grid-template-columns:repeat(4,1fr)}
+.card{display:block}.frame{position:relative;overflow:hidden;background:var(--bg2);aspect-ratio:4/5}
+.frame svg{width:100%;height:100%;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .frame svg{transform:scale(1.06)}
+.frame .v{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:var(--ink);color:var(--on);font-size:12px;letter-spacing:.12em;text-transform:uppercase;transform:translateY(101%);transition:.4s;display:flex;justify-content:space-between}
+.card:hover .v{transform:none}
+.cap{display:flex;justify-content:space-between;gap:16px;padding-top:14px}.cap h3{font-size:21px;font-weight:400}.cap small{color:var(--mute);font-size:13px;display:block;margin-top:2px}.cap span{font-size:14px;white-space:nowrap;padding-top:4px}
+.sold{color:var(--acc)}
+.quote{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:300;line-height:1.15;max-width:960px;letter-spacing:-.02em}.quote em{color:var(--acc)}
+.arts{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.art{display:block}.art .ph{aspect-ratio:1;overflow:hidden;background:var(--bg2);margin-bottom:14px}.art .ph svg{width:100%;height:100%;transition:transform 1s}.art:hover svg{transform:scale(1.07)}
+.art h3{font-size:22px;font-weight:400}.art small{color:var(--mute)}
+/* explore */
+.ph1{padding:64px 0 40px}.ph1 h1{font-size:clamp(44px,7vw,92px)}
+.fbar{display:flex;gap:24px 40px;flex-wrap:wrap;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:48px;align-items:center;justify-content:space-between}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{padding:7px 16px;border:1px solid var(--line);border-radius:99px;font-size:13px;transition:.2s}.chip:hover{border-color:var(--ink)}.chip.on{background:var(--ink);color:var(--on);border-color:var(--ink)}
+select,input,textarea{font:inherit;background:transparent;color:var(--ink);border:0;border-bottom:1px solid var(--ink);padding:10px 0;width:100%;border-radius:0;outline:0}
+select{width:auto;padding-right:8px;font-size:13px}select option{background:var(--bg);color:var(--ink)}
+input:focus,textarea:focus,select:focus{border-color:var(--acc)}
+label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:block}
+.fg{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.empty{padding:80px 0;text-align:center;color:var(--mute)}
+/* detail */
+.det{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;padding:56px 0 96px;align-items:start}
+.det .big{background:var(--bg2);aspect-ratio:4/5;overflow:hidden}.det .big svg{width:100%;height:100%;display:block}
+.det .info{position:sticky;top:110px}.det h1{font-size:clamp(40px,5vw,68px);margin:12px 0 8px}
+.price{font-family:var(--serif);font-size:34px;font-weight:300;margin:28px 0}
+dl{display:grid;grid-template-columns:110px 1fr;border-top:1px solid var(--line);margin:28px 0}dt,dd{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}dt{color:var(--mute)}
+.crumb{font-size:12px;color:var(--mute);padding-top:28px}.crumb a:hover{color:var(--ink)}
+.note{font-size:13px;color:var(--mute);margin-top:18px}
+/* artist */
+.ah{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;padding:64px 0 80px;align-items:end}.ah h1{font-size:clamp(48px,7vw,96px)}
+.stats{display:flex;gap:48px;margin-top:36px}.stats b{font-family:var(--serif);font-weight:300;font-size:40px;display:block;line-height:1}.stats span{font-size:12px;color:var(--mute)}
+.mono{aspect-ratio:1;display:grid;place-items:center;background:var(--bg2);font-family:var(--serif);font-size:min(24vw,260px);font-weight:300;color:var(--acc)}
+/* about, forms */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:80px}.prose p{margin-bottom:20px;color:var(--mute);font-size:16px;max-width:520px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px}.nums b{font-family:var(--serif);font-size:64px;font-weight:300;display:block;line-height:1;color:var(--acc)}
+.form{display:grid;gap:28px}.row{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.steps{display:flex;gap:12px;margin-bottom:40px}.steps div{flex:1;border-top:2px solid var(--line);padding-top:10px;font-size:12px;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}.steps .on{border-color:var(--ink);color:var(--ink)}
+.drop{border:1px dashed var(--mute);padding:48px;text-align:center;color:var(--mute);transition:.2s}.drop:hover{border-color:var(--acc);color:var(--acc)}
+.pay{display:flex;gap:8px;flex-wrap:wrap}
+/* cart */
+.cl{display:grid;grid-template-columns:1.5fr 1fr;gap:80px;padding-bottom:96px;align-items:start}
+.ci{display:grid;grid-template-columns:96px 1fr auto;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}.ci .t{width:96px;aspect-ratio:4/5;overflow:hidden}.ci svg{width:100%;height:100%;display:block}.ci h3{font-size:20px;font-weight:400}
+.sum{background:var(--bg2);padding:32px;position:sticky;top:100px}.sum .l{display:flex;justify-content:space-between;padding:8px 0;font-size:14px}.sum .tt{border-top:1px solid var(--ink);margin-top:12px;padding-top:16px;font-family:var(--serif);font-size:26px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--on);padding:14px 22px;font-size:13px;z-index:40;display:flex;gap:20px;align-items:center}
+footer{border-top:1px solid var(--line);padding:56px 0 40px;margin-top:0}footer .fr{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}footer p{color:var(--mute);font-size:13px;max-width:320px;margin-top:10px}
+@media(max-width:900px){.w{padding:0 20px}.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:20px;gap:18px;border-bottom:1px solid var(--line)}.links.open{display:flex}.burger{display:block}
+.hero,.det,.ah,.two,.cl{grid-template-columns:1fr;gap:40px}.hero{padding:40px 0 64px}.grid,.grid.g4,.arts{grid-template-columns:1fr 1fr;gap:32px 16px}.det .info,.sum{position:static}.nums{grid-template-columns:1fr}.row{grid-template-columns:1fr}.sec{padding:56px 0}.cap{flex-direction:column;gap:0}.stats{gap:28px}}
+@media(max-width:520px){.grid,.grid.g4{grid-template-columns:1fr}.arts{grid-template-columns:1fr 1fr}.ci{grid-template-columns:72px 1fr}.ci>:last-child{grid-column:2}.ci .t{width:72px}}
+/* ---- Editorial Art Showcase design system ---- */
+html:root:not([data-theme="none"]){--bg:#E5E5E5;--bg2:#F8F8F8;--ink:#121212;--mute:#5A5A5A;--line:#D4D4D4;--acc:#8E0E00;--on:#FFFFFF;--gold:#F59E0B;--serif:'Source Serif 4',Georgia,serif;--sans:'Chivo',system-ui,sans-serif;--mono:'Space Grotesk',ui-monospace,monospace}
+body{margin-left:96px;font-family:var(--sans)}body::before{display:none}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;letter-spacing:-.015em}
+h1,h2{text-transform:uppercase;line-height:.98}
+.eyebrow,label,.chip,.btn,.ul,dt,.stats span,.steps div,.cap small,.v,.cap span,.crumb,.toast,.links a,.cartb,.burger,select,.note,footer p,.sum .l,.prose i{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.eyebrow{font-size:11px;color:var(--ink)}.eyebrow::before{content:'— '}
+.rail{position:fixed;z-index:35;left:0;top:0;bottom:0;width:96px;background:var(--acc);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:calc(28px + env(safe-area-inset-top,0px)) 0 28px;cursor:pointer}
+.rl span{display:block;font-family:var(--serif);font-weight:700;font-size:46px;line-height:1;text-align:center}.rl span:not(:last-child)::after{content:'';display:block;width:1px;height:20px;background:#fff;margin:8px auto}
+.rs{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+header{background:var(--bg);backdrop-filter:none;border-bottom:2px solid var(--ink)}
+.logo{font-family:var(--serif);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:17px}.logo i{font-style:normal}
+.links a{font-size:11px}.links a:hover,.links a.on{border-color:var(--acc);color:var(--acc)}
+.cartb b{border-radius:0;background:var(--acc);color:#fff}
+.btn{font-size:12px;font-weight:600;border:2px solid var(--ink);background:var(--ink);color:#fff;transition:.15s}.btn:hover{background:var(--acc);border-color:var(--acc);box-shadow:4px 4px 0 var(--ink);transform:translate(-2px,-2px)}
+.btn.o{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn.o:hover{background:var(--line);color:var(--ink);box-shadow:none;transform:none}
+.ul{font-size:11px;border-bottom:2px solid var(--ink)}.ul::before{content:'— '}.ul::after{content:' —'}
+.hero h1{font-size:clamp(46px,7.2vw,108px);font-weight:700;line-height:.94;letter-spacing:-.02em}.hero h1 em{font-style:italic;color:var(--acc)}
+.hero p,.prose p{font-family:var(--sans)}
+.sec{border-top:2px solid var(--ink)}.sh h2{font-size:clamp(30px,4vw,52px)}
+.grid,.arts{counter-reset:n}.card,.art{counter-increment:n}
+.card .cap h3,.art h3{font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:.01em}
+.card .cap h3::before,.art h3::before{content:counter(n,decimal-leading-zero);display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--acc);margin-bottom:6px}
+.cap{border-top:1px solid var(--ink);margin-top:14px;padding-top:12px}.cap small{font-size:10px;color:var(--mute)}.cap span{font-size:12px}
+.frame,.art .ph{background:var(--bg2);border:0}
+.frame .v{background:var(--acc);font-size:10px}
+.art small{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.quote{font-family:var(--serif);font-weight:700;text-transform:uppercase;font-size:clamp(26px,3.8vw,50px);line-height:1.05}.quote em{color:var(--acc);font-style:italic}
+.chip{border-radius:0;border:1px solid var(--ink);background:var(--bg);font-size:10px;font-weight:600;padding:8px 14px}.chip:hover{background:var(--line)}.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.fbar{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+select{border:1.5px solid var(--ink);padding:8px 10px;font-size:11px;background:var(--bg2)}
+input,textarea{border-bottom:2px solid var(--ink);font-family:var(--sans)}input::placeholder,textarea::placeholder{color:#737373}input:focus,textarea:focus,select:focus{border-color:var(--acc)}
+.det .big{background:var(--bg2);border:2px solid var(--ink);padding:14px}.det .big svg,.det .big img{height:100%}
+.det .info h1{font-size:clamp(36px,4.6vw,64px)}.price{font-family:var(--serif);font-weight:600;font-size:36px}
+dl{border-top:2px solid var(--ink)}dt,dd{border-bottom:1px solid var(--ink)}dt{font-size:10px;color:var(--ink)}
+.mono{background:var(--acc);color:#fff;border:2px solid var(--ink);font-weight:700}
+.stats b{font-family:var(--serif);font-weight:700;color:var(--acc)}.stats span{font-size:10px}
+.nums b{font-family:var(--serif);font-weight:700;color:var(--acc)}
+.steps div{border-top:2px solid var(--line);font-size:10px}.steps .on{border-color:var(--acc);color:var(--ink)}
+.drop{border:2px dashed var(--ink);background:var(--bg2);color:var(--ink)}.drop:hover{border-color:var(--acc);color:var(--acc)}
+.sum{background:var(--bg2);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}.sum .tt{border-top:2px solid var(--ink);font-family:var(--serif);font-weight:600}
+.ci{border-bottom:1px solid var(--ink)}.ci h3{text-transform:uppercase;font-size:17px}
+.toast{background:var(--ink);border-left:6px solid var(--gold);font-size:11px;color:#fff}
+footer{border-top:2px solid var(--ink);background:var(--bg)}
+@media(max-width:900px){body{margin-left:0;padding-top:calc(48px + env(safe-area-inset-top,0px))}
+.rail{right:0;bottom:auto;width:auto;height:calc(48px + env(safe-area-inset-top,0px));flex-direction:row;justify-content:center;padding:env(safe-area-inset-top,0px) 16px 0}.rs{display:none}
+.rl{display:flex;align-items:center}.rl span{font-size:24px}.rl span:not(:last-child)::after{display:inline-block;width:14px;height:1px;margin:0 8px;vertical-align:middle}
+header{top:calc(48px + env(safe-area-inset-top,0px))}.links{background:var(--bg)}}
+/* legibility pass */
+h1,h2,h3,.serif,.quote,.price,.stats b,.nums b,.mono,.logo,.rl span,.sum .tt{font-optical-sizing:auto}
+h1,h2{line-height:1.08;letter-spacing:0}h3,.card .cap h3,.art h3{letter-spacing:.01em;line-height:1.2}
+.hero h1{line-height:1.04;letter-spacing:-.005em}.quote{line-height:1.15}
+body{font-size:16px;line-height:1.65}
+.eyebrow{font-size:12px}.cap small,.art small,.chip,dt,.stats span,.steps div,.frame .v{font-size:11px}.cap span{font-size:13px}.links a,.ul{font-size:12px}
+.stk{counter-reset:n}.stk .grid{counter-reset:none}.stk>*{margin-bottom:80px}
+.solo{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;align-items:end}.solo.flip{grid-template-columns:1fr 1.7fr}.solo.flip .card{order:2}
+.frame.wide{aspect-ratio:4/3}.sinfo h2{font-size:clamp(30px,3.6vw,52px);margin:14px 0 16px}.sinfo h2::before{content:counter(n,decimal-leading-zero);display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--acc);margin-bottom:8px}
+.sinfo p{color:var(--mute);max-width:380px;margin-bottom:8px}.sinfo .price{margin:16px 0 24px}
+@media(max-width:900px){.solo,.solo.flip{grid-template-columns:1fr;gap:24px}.solo.flip .card{order:0}.stk>*{margin-bottom:56px}
+.burger{display:none}.nav{height:auto;flex-wrap:wrap;padding:12px 0 10px;row-gap:10px}.links{display:flex!important;position:static;flex-direction:row;overflow-x:auto;gap:22px;padding:0;border:0;order:3;width:100%;white-space:nowrap}}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.tier{text-align:left;background:var(--bg2);border:2px solid var(--ink);padding:28px;display:flex;flex-direction:column;gap:14px;transition:.15s}.tier b{font-family:var(--serif);font-size:42px;font-weight:700}.tier small{font:400 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}.tier ul{padding-left:18px;color:var(--mute);font-size:15px}.tier li{margin-bottom:8px}.tier.on{border-color:var(--acc);box-shadow:6px 6px 0 var(--ink);transform:translate(-3px,-3px)}
+.tag{display:inline-block;background:var(--gold);color:var(--ink);border:1px solid var(--ink);font:600 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;margin-bottom:10px;cursor:pointer}header .tag{margin:0}
+.banner{height:56px;border:2px solid var(--ink);margin-top:28px;display:flex;align-items:flex-end;padding:0 14px}.banner .tag{margin:0 0 -1px}
+.sw{display:flex;gap:12px;margin-top:14px}.sw button{width:44px;height:44px;border:2px solid var(--ink)}.sw .on{outline:3px solid var(--acc);outline-offset:3px}
+@media(max-width:900px){.tiers{grid-template-columns:1fr}}
+.srch{width:260px;font-size:14px;border:1.5px solid var(--ink);padding:9px 12px;background:var(--bg2)}
+.lr{display:grid;grid-template-columns:48px 1fr auto auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--ink)}.lr .nm{font-family:var(--serif);font-size:24px;font-weight:600;text-transform:uppercase;cursor:pointer}.idx,.lr .meta{font:400 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}.lr .btn{padding:10px 18px;font-size:11px}
+@media(min-width:901px){.links{gap:24px}}
+@media(max-width:900px){.srch{width:100%}.lr{grid-template-columns:36px 1fr auto}.lr .meta{display:none}.lr .nm{font-size:19px}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useEffect,useMemo}=React;const html=htm.bind(React.createElement);
+const ARTISTS=[
+{id:'meera',n:'Meera Sundaram',c:'Chennai',cr:'Gouache & ink',y:2014,b:'Meera paints the hour before monsoon: heavy light, flattened horizons, the quiet of a street holding its breath. Trained as an architect, she builds her compositions the way she once drew sections — in strata.'},
+{id:'tashi',n:'Tashi Dorjee',c:'Leh, Ladakh',cr:'Oil on canvas',y:2011,b:'Working at 3,500 metres, Tashi reduces mountain and sky to a handful of mineral pigments. His surfaces are scraped back and rebuilt until they carry the dry glare of the high desert.'},
+{id:'anirban',n:'Anirban Sen',c:'Kolkata',cr:'Linocut & etching',y:2009,b:'Anirban prints from a rented room above a binding workshop. Each edition is small, hand-inked, and numbered — studies of tram lines, ledgers, and the geometry of old city walls.'},
+{id:'rukmini',n:'Rukmini Vaze',c:'Pune',cr:'Mixed media',y:2017,b:'Rukmini layers paper, thread and pigment into dense, tactile fields. Her work begins with discarded household textiles and ends somewhere between painting and cartography.'}];
+const P=(a,b,c,d)=>[a,b,c,d];
+const WORKS=[
+['w1','Before the Rain, Mylapore','meera','Painting',48000,'76 × 56 cm','2024','Gouache on cotton paper','strata',P('#E8DCC8','#B5573A','#2F3A33','#D9A441'),3,1],
+['w2','Salt Hour','meera','Painting',32000,'50 × 40 cm','2025','Gouache and ink on paper','sun',P('#EDE3D3','#C96A45','#6E7F6A','#26302B'),7,1],
+['w3','Terrace, Quiet','meera','Drawing',14500,'30 × 24 cm','2025','Ink on handmade paper','lines',P('#F0E8DA','#2A2622','#8E7F6C','#B5573A'),5,1],
+['w4','Ridge Under Glare','tashi','Painting',185000,'122 × 91 cm','2024','Oil on canvas','waves',P('#E3D6BF','#8C4A33','#4C5E66','#1E2A30'),2,1],
+['w5','Pass, Late October','tashi','Painting',96000,'91 × 76 cm','2023','Oil on linen','sun',P('#D9CBB3','#3F5560','#B88A4A','#1D262B'),11,1],
+['w6','Stupa Study No. 4','tashi','Drawing',22000,'42 × 30 cm','2025','Charcoal and pigment on paper','blocks',P('#EBE1CF','#7C3F2C','#A8957A','#2B2723'),4,1],
+['w7','Tram Depot III','anirban','Printmaking',18000,'45 × 35 cm','2025','Linocut, ed. 12','blocks',P('#EFE6D6','#1F2A33','#C3573A','#8A8372'),9,1],
+['w8','Ledger Wall','anirban','Printmaking',12500,'38 × 28 cm','2024','Etching, ed. 20','lines',P('#EDE4D4','#2B2A27','#A5412B','#9A8F7C'),8,1],
+['w9','Arches, College Street','anirban','Printmaking',26000,'60 × 45 cm','2025','Two-colour linocut, ed. 8','arch',P('#F0E7D8','#22303A','#C06A48','#D4B27A'),6,1],
+['w10','Household Map 07','rukmini','Mixed media',58000,'80 × 80 cm','2024','Textile, thread, pigment on board','blocks',P('#E6D9C5','#A9503A','#5E6B5B','#E0B25E'),12,1],
+['w11','What the Cloth Kept','rukmini','Mixed media',74000,'100 × 70 cm','2025','Paper, thread, acrylic on canvas','strata',P('#EADFCC','#3D4F4A','#C27A55','#B03F2C'),14,1],
+['w12','Threshold','rukmini','Photography',9500,'50 × 40 cm','2025','Archival pigment print, ed. 15','arch',P('#E9DDCB','#6B7A6A','#B5573A','#2A2723'),15,0]
+].map(a=>({id:a[0],t:a[1],ar:a[2],cat:a[3],pr:a[4],sz:a[5],yr:a[6],md:a[7],k:a[8],p:a[9],s:a[10],av:a[11]}));
+const CATS=['All','Painting','Drawing','Printmaking','Mixed media','Photography'];
+const RANGES=[['Any price',0,1e9],['Under ₹15,000',0,15000],['₹15,000 – ₹50,000',15000,50000],['Above ₹50,000',50000,1e9]];
+const inr=n=>'₹'+n.toLocaleString('en-IN');
+const TIERS=[{t:1,p:400,perks:['Supporter tag displayed on your profile','Customise your profile with unique themes and banners']},{t:2,p:600,perks:['Everything in Tier 1','Get your product featured on the front page']},{t:3,p:800,perks:['Everything in Tier 2','Further perks, coming soon']}];
+const SUPT={meera:2,tashi:1,anirban:3},BAN={meera:'#8E0E00',tashi:'#F59E0B',anirban:'#121212'},FEAT=['w2','w9'];
+const keep=w=>w.pr>10000?Math.round(w.pr*.85):w.pr;
+const FOL={meera:214,tashi:158,anirban:342,rukmini:97};
+const artist=id=>ARTISTS.find(a=>a.id===id);
+const R=s=>()=>(s=(s*16807)%2147483647)/2147483647;
+/* Add photos here: IMG={w1:'data:image/jpeg;base64,...'} (keys w1–w12) */
+const IMG={};
+function Art({k,p,s,id}){if(id&&IMG[id])return html`<img src=${IMG[id]} alt="" style=${{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>`;const r=R(s*977+13);let g=[];
+if(k==='strata'){let y=0,i=0;while(y<500){const h=36+r()*90;g.push(html`<rect key=${i} x="0" y=${y} width="400" height=${h} fill=${p[1+i%3]} opacity=${.55+r()*.45}/>`);y+=h;i++}
+g.push(html`<circle key="c" cx=${120+r()*160} cy=${140+r()*120} r=${60+r()*50} fill=${p[0]}/>`)}
+else if(k==='sun'){g.push(html`<circle key="a" cx=${150+r()*100} cy=${170+r()*60} r=${110+r()*30} fill=${p[1]}/>`,html`<circle key="b" cx=${230+r()*80} cy="120" r="44" fill=${p[2]}/>`,html`<rect key="c" y="330" width="400" height="170" fill=${p[3]}/>`,html`<path key="d" d="M0 330 Q200 ${270+r()*40} 400 330Z" fill=${p[3]}/>`,html`<rect key="e" x="0" y=${400+r()*30} width="400" height="3" fill=${p[0]}/>`)}
+else if(k==='blocks'){let i=0;for(let x=0;x<3;x++)for(let y=0;y<4;y++){const o=r()*30;g.push(html`<rect key=${i++} x=${x*133+o/2+6} y=${y*125+o/3+6} width=${100+r()*26} height=${90+r()*28} fill=${p[1+Math.floor(r()*3)]} opacity=${.5+r()*.5}/>`)}}
+else if(k==='waves'){for(let i=0;i<9;i++){const y=90+i*48,a=14+r()*34;g.push(html`<path key=${i} d=${`M0 ${y} C100 ${y-a} 200 ${y+a} 400 ${y-a/2} L400 500 L0 500Z`} fill=${p[1+i%3]} opacity=${.35+i*.07}/>`)}}
+else if(k==='arch'){for(let i=0;i<4;i++){const w=300-i*62,x=(400-w)/2,h=420-i*60;g.push(html`<path key=${i} d=${`M${x} 500 V${500-h+w/2} A${w/2} ${w/2} 0 0 1 ${x+w} ${500-h+w/2} V500Z`} fill=${p[1+i%3]} opacity=${.9-i*.1}/>`)}}
+else{for(let i=0;i<46;i++){const x=14+i*8,h=60+r()*340,y=r()*(500-h);g.push(html`<rect key=${i} x=${x} y=${y} width=${i%7===0?3:1.2} height=${h} fill=${i%9===0?p[3]:p[1]} opacity=${.4+r()*.6}/>`)}}
+return html`<svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Artwork"><rect width="400" height="500" fill=${p[0]}/>${g}</svg>`}
+const A=({w})=>html`<${Art} k=${w.k} p=${w.p} s=${w.s} id=${w.id}/>`;
+function Card({w,go}){const a=artist(w.ar);return html`<a class="card" href=${'#artwork-'+w.id} onClick=${e=>{e.preventDefault();go('artwork-'+w.id)}}>
+<div class="frame"><${A} w=${w}/><div class="v"><span>View work</span><span>→</span></div></div>
+<div class="cap"><div><h3>${w.t}</h3><small>${a.n} · ${w.cat}</small></div><span class=${w.av?'':'sold'}>${w.av?inr(w.pr):'Sold'}</span></div></a>`}
+function Solo({w,go,flip}){const a=artist(w.ar),r='artwork-'+w.id;return html`<div class=${'solo'+(flip?' flip':'')}><a class="card" href=${'#'+r} onClick=${e=>{e.preventDefault();go(r)}}><div class="frame wide"><${A} w=${w}/><div class="v"><span>View work</span><span>→</span></div></div></a>
+<div class="sinfo"><div class="eyebrow">${w.cat} · ${w.yr}</div><h2>${w.t}</h2><p>${a.n}, ${a.c}</p><p>${w.md} · ${w.sz}</p><div class="price">${w.av?inr(w.pr):'Sold'}</div><button class="btn" onClick=${()=>go(r)}>View work →</button></div></div>`}
+function Stack({list,go}){const out=[];let i=0,j=0;while(i<list.length){if(j%2===0){const w=list[i++];out.push(html`<${Solo} key=${w.id} w=${w} go=${go} flip=${(j/2)%2===1}/>`)}else{const c=list.slice(i,i+4);i+=4;out.push(html`<div class="grid g4" key=${'g'+i}>${c.map(w=>html`<${Card} key=${w.id} w=${w} go=${go}/>`)}</div>`)}j++}return html`<div class="stk">${out}</div>`}
+function Home({go,sup}){const picks=[...FEAT,...(sup&&sup.tier>1&&sup.pick&&!FEAT.includes(sup.pick)?[sup.pick]:[])].map(i=>WORKS.find(w=>w.id===i));const tierOf=w=>sup&&sup.pick===w.id?sup.tier:(SUPT[w.ar]||0);const feat=['w4','w1','w9','w10','w7'].map(i=>WORKS.find(w=>w.id===i));
+return html`<div class="w"><section class="hero"><div><div class="eyebrow">Independent Indian artists · Direct from studio</div>
+<h1 style=${{marginTop:20}}>Art, from the <em>hands</em> that made it.</h1>
+<p>Kal-a-shiyaana is a curated marketplace for independent and local artists across India. Original works, honest prices, and the artist’s own story with every piece.</p>
+<div style=${{display:'flex',gap:24,alignItems:'center',flexWrap:'wrap'}}><button class="btn" onClick=${()=>go('explore')}>Explore the collection →</button><a class="ul" onClick=${()=>go('join')}>Sell your work</a></div></div>
+<div class="hc">${[WORKS[0],WORKS[6]].map(w=>html`<${Card} key=${w.id} w=${w} go=${go}/>`)}</div></section></div>
+<div class="w"><section class="sec"><div class="sh"><div><div class="eyebrow">Selected this month</div><h2 style=${{marginTop:12}}>Considered, collectable.</h2></div><a class="ul" onClick=${()=>go('explore')}>All works</a></div>
+<${Stack} list=${feat} go=${go}/></section>
+<section class="sec"><div class="sh"><div><div class="eyebrow">Supporters’ picks</div><h2 style=${{marginTop:12}}>Featured by the community.</h2></div><a class="ul" onClick=${()=>go('support')}>Become a supporter</a></div><div class="grid g4">${picks.map(w=>html`<div key=${w.id}><span class="tag">Tier ${tierOf(w)} supporter</span><${Card} w=${w} go=${go}/></div>`)}</div></section>
+<section class="sec"><div class="eyebrow">Our premise</div><p class="quote" style=${{marginTop:24}}>Under ₹10,000, we take <em>nothing</em>. Above it, just fifteen percent — so new artists can sell from day one.</p></section>
+<section class="sec"><div class="sh"><div><div class="eyebrow">The makers</div><h2 style=${{marginTop:12}}>Four studios, four ways of seeing.</h2></div><a class="ul" onClick=${()=>go('artists')}>All artists</a></div>
+<div class="arts">${ARTISTS.map(a=>html`<a class="art" key=${a.id} onClick=${()=>go('artist-'+a.id)}><div class="ph"><${A} w=${WORKS.find(w=>w.ar===a.id)}/></div><h3>${a.n}</h3><small>${a.c} · ${a.cr}</small></a>`)}</div></section></div>`}
+function Explore({go}){const [cat,setCat]=useState('All'),[rg,setRg]=useState(0),[so,setSo]=useState('new'),[q,setQ]=useState('');
+const list=useMemo(()=>{const [,lo,hi]=RANGES[rg];let l=WORKS.filter(w=>(cat==='All'||w.cat===cat)&&w.pr>=lo&&w.pr<hi&&(w.t+' '+artist(w.ar).n+' '+w.md).toLowerCase().includes(q.toLowerCase()));if(so==='lo')l=[...l].sort((a,b)=>a.pr-b.pr);if(so==='hi')l=[...l].sort((a,b)=>b.pr-a.pr);return l},[cat,rg,so,q]);
+return html`<div class="w"><div class="ph1"><div class="eyebrow">The collection</div><h1 style=${{marginTop:16}}>Explore works</h1></div>
+<div class="fbar"><div class="chips">${CATS.map(c=>html`<button key=${c} class=${'chip'+(cat===c?' on':'')} onClick=${()=>setCat(c)}>${c}</button>`)}</div>
+<div class="fg"><input class="srch" placeholder="Search title, artist, medium" value=${q} onChange=${e=>setQ(e.target.value)}/><select value=${rg} onChange=${e=>setRg(+e.target.value)} aria-label="Price">${RANGES.map((r,i)=>html`<option key=${i} value=${i}>${r[0]}</option>`)}</select>
+<select value=${so} onChange=${e=>setSo(e.target.value)} aria-label="Sort"><option value="new">Newest</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select>
+<span class="eyebrow">${list.length} works</span></div></div>
+${list.length?html`<div style=${{paddingBottom:56}}><${Stack} list=${list} go=${go}/></div>`:html`<div class="empty"><h2 class="serif" style=${{fontSize:32,color:'var(--ink)'}}>Nothing here yet.</h2><p>Try a wider price range or another category.</p></div>`}</div>`}
+function Artists({go,follows}){const [q,setQ]=useState(''),[fl,setFl]=useState('All');const list=ARTISTS.filter(a=>(fl==='All'||(fl==='Following'?follows.includes(a.id):a.c.includes(fl)))&&(a.n+' '+a.c+' '+a.cr).toLowerCase().includes(q.toLowerCase()));
+return html`<div class="w"><div class="ph1"><div class="eyebrow">The makers</div><h1 style=${{marginTop:16}}>Artists</h1></div>
+<div class="fbar"><input class="srch" placeholder="Search by name, city or craft" value=${q} onChange=${e=>setQ(e.target.value)}/><div class="chips">${['All','Following','Chennai','Leh','Kolkata','Pune'].map(c=>html`<button key=${c} class=${'chip'+(fl===c?' on':'')} onClick=${()=>setFl(c)}>${c}</button>`)}</div><span class="eyebrow">${list.length} artists</span></div>
+${!list.length&&html`<div class="empty"><h2 class="serif" style=${{fontSize:32,color:'var(--ink)'}}>No artists found.</h2><p>${fl==='Following'?'You are not following anyone yet.':'Try another name or city.'}</p></div>`}<div class="arts" style=${{paddingBottom:96}}>${list.map(a=>html`<a class="art" key=${a.id} onClick=${()=>go('artist-'+a.id)}><div class="ph"><${A} w=${WORKS.find(w=>w.ar===a.id)}/></div><h3>${a.n}</h3><small>${a.c} · ${a.cr}</small></a>`)}</div></div>`}
+function ArtistP({id,go,follows,toggle,send}){const [m,setM]=useState(''),[ok,setOk]=useState(false);const a=artist(id);if(!a)return null;const isF=follows.includes(id);const ws=WORKS.filter(w=>w.ar===id);
+return html`<div class="w">${SUPT[id]&&html`<div class="banner" style=${{background:BAN[id]}}><span class="tag">Tier ${SUPT[id]} supporter</span></div>`}<div class="ah"><div><div class="eyebrow">${a.c} · ${a.cr}</div><h1 style=${{margin:'16px 0 28px'}}>${a.n}</h1><p style=${{color:'var(--mute)',fontSize:16,maxWidth:480}}>${a.b}</p>
+<div class="stats"><div><b>${a.y}</b><span>Practising since</span></div><div><b>${ws.length}</b><span>Works here</span></div><div><b>${ws.filter(w=>w.av).length}</b><span>Available</span></div></div></div>
+<div class="mono" aria-hidden="true">${a.n[0]}</div></div>
+<div class="sec"><div class="sh"><h2>Connect</h2><button class=${'btn'+(isF?' o':'')} onClick=${()=>toggle(id)}>${isF?'Following ✓':'Follow '+a.n.split(' ')[0]}</button></div><div class="two"><div class="prose"><p><b style=${{color:'var(--ink)'}}>${(FOL[id]+(isF?1:0)).toLocaleString('en-IN')}</b> people follow ${a.n}.</p><p>Follow to see new work in your Community page, or write directly to ask about a piece, a commission or a studio visit.</p></div>
+<div class="form">${ok?html`<div><div class="eyebrow">Message sent</div><p style=${{margin:'12px 0 20px',color:'var(--mute)'}}>${a.n.split(' ')[0]} will see it in their inbox. Find your messages under Community.</p><button class="btn o" onClick=${()=>setOk(false)}>Write another</button></div>`:html`<div><label>Message to ${a.n.split(' ')[0]}</label><textarea rows="4" placeholder="Hello — I love your work and wanted to ask…" value=${m} onChange=${e=>setM(e.target.value)}/></div><div><button class="btn" disabled=${m.trim().length<5} onClick=${()=>{send(id,m.trim());setM('');setOk(true)}}>Send message</button></div>`}</div></div></div>
+<div class="sec"><div class="sh"><h2>Works by ${a.n.split(' ')[0]}</h2><a class="ul" onClick=${()=>go('artists')}>All artists</a></div><div class="grid">${ws.map(w=>html`<${Card} key=${w.id} w=${w} go=${go}/>`)}</div></div>
+<div style=${{height:80}}/></div>`}
+function Work({id,go,cart,add}){const w=WORKS.find(x=>x.id===id);if(!w)return null;const a=artist(w.ar),inC=cart.includes(w.id),more=WORKS.filter(x=>x.ar===w.ar&&x.id!==w.id);
+return html`<div class="w"><div class="crumb"><a onClick=${()=>go('explore')}>Explore</a> / <a onClick=${()=>go('artist-'+a.id)}>${a.n}</a> / ${w.t}</div>
+<div class="det"><div class="big"><${A} w=${w}/></div><div class="info"><div class="eyebrow">${w.cat} · ${w.yr}</div><h1>${w.t}</h1>
+<a class="ul" onClick=${()=>go('artist-'+a.id)}>${a.n}, ${a.c}</a>
+<div class="price">${w.av?inr(w.pr):'Sold'}</div>
+${w.av?(inC?html`<button class="btn" style=${{width:'100%'}} onClick=${()=>go('cart')}>In your cart — view cart →</button>`:html`<button class="btn" style=${{width:'100%'}} onClick=${()=>add(w)}>Add to cart</button>`):html`<button class="btn o" style=${{width:'100%'}} onClick=${()=>go('artist-'+a.id)}>See available works by ${a.n.split(' ')[0]}</button>`}
+<dl><dt>Medium</dt><dd>${w.md}</dd><dt>Size</dt><dd>${w.sz}</dd><dt>Year</dt><dd>${w.yr}</dd><dt>Shipping</dt><dd>Insured, free across India. 5–8 days.</dd><dt>Packaging</dt><dd>Recycled cardboard, paper wrap, reusable where possible.</dd><dt>Authenticity</dt><dd>Signed, with certificate from the artist.</dd></dl>
+<p class="note">${w.pr>10000?`15% platform commission applies. ${a.n.split(' ')[0]} receives ${inr(keep(w))}.`:`No commission on works up to ₹10,000 — ${a.n.split(' ')[0]} receives the full ${inr(w.pr)}.`} 7-day returns.</p></div></div>
+<div class="sec"><div class="sh"><h2>More by ${a.n.split(' ')[0]}</h2></div><div class="grid">${more.map(x=>html`<${Card} key=${x.id} w=${x} go=${go}/>`)}</div></div><div style=${{height:80}}/></div>`}
+function Support({go,sup,setSup}){const [t,setT]=useState(2),[f,setF]=useState({n:'',e:''});const T=TIERS.find(x=>x.t===t),u=k=>e=>setF({...f,[k]:e.target.value}),TH=['#8E0E00','#F59E0B','#121212','#5F7A6B'];
+if(sup){const me=TIERS.find(x=>x.t===sup.tier);return html`<div class="w" style=${{paddingBottom:96,maxWidth:900}}><div class="ph1"><div class="eyebrow">Supporter</div><h1 style=${{marginTop:16}}>Thank you, ${sup.name.split(' ')[0]}.</h1></div>
+<div class="sum" style=${{position:'static',padding:0}}><div class="banner" style=${{background:TH[sup.banner],margin:0,border:0,height:96}}><span class="tag">Tier ${sup.tier} supporter</span></div><div style=${{padding:28}}><h3 style=${{fontSize:26}}>${sup.name}</h3><p class="note">${inr(me.p)} / month</p></div></div>
+<div style=${{marginTop:48}}><div class="eyebrow">Profile theme</div><div class="sw">${TH.map((c,i)=>html`<button key=${c} aria-label=${'Theme '+(i+1)} class=${sup.banner===i?'on':''} style=${{background:c}} onClick=${()=>setSup({...sup,banner:i})}/>`)}</div>
+${sup.tier>1?html`<div style=${{marginTop:40}}><label>Feature a work on the front page</label><select style=${{width:'100%',marginTop:8}} value=${sup.pick||''} onChange=${e=>setSup({...sup,pick:e.target.value||null})}><option value="">Choose a work…</option>${WORKS.filter(w=>w.av).map(w=>html`<option key=${w.id} value=${w.id}>${w.t} — ${artist(w.ar).n}</option>`)}</select><p class="note">Appears under Supporters’ picks on the homepage.</p></div>`:html`<p class="note" style=${{marginTop:32}}>Upgrade to Tier 2 to feature a work on the front page.</p>`}
+<div style=${{display:'flex',gap:16,marginTop:40,flexWrap:'wrap'}}><button class="btn" onClick=${()=>go('home')}>See the front page</button><button class="btn o" onClick=${()=>setSup(null)}>End membership</button></div></div></div>`}
+return html`<div class="w" style=${{paddingBottom:96}}><div class="ph1"><div class="eyebrow">Community donations</div><h1 style=${{marginTop:16,maxWidth:900}}>Keep the studio doors open.</h1><p style=${{color:'var(--mute)',fontSize:17,maxWidth:560,marginTop:24}}>New artists sell here with no commission up to ₹10,000. Monthly supporters make that possible — and get something back.</p></div>
+<div class="tiers">${TIERS.map(x=>html`<button key=${x.t} class=${'tier'+(t===x.t?' on':'')} onClick=${()=>setT(x.t)}><span class="eyebrow">Tier ${x.t}</span><b>${inr(x.p)}<small> / month</small></b><ul>${x.perks.map(p=>html`<li key=${p}>${p}</li>`)}</ul></button>`)}</div>
+<div class="form" style=${{maxWidth:560,marginTop:48}}><div class="row"><div><label>Name</label><input value=${f.n} onChange=${u('n')}/></div><div><label>Email</label><input type="email" value=${f.e} onChange=${u('e')}/></div></div><button class="btn" disabled=${!(f.n&&f.e.includes('@'))} onClick=${()=>setSup({tier:t,name:f.n,banner:0,pick:null})}>Become a Tier ${t} supporter — ${inr(T.p)} / month</button></div></div>`}
+function Community({go,follows,toggle,msgs}){const fa=ARTISTS.filter(a=>follows.includes(a.id)),more=ARTISTS.filter(a=>!follows.includes(a.id)),fw=WORKS.filter(w=>follows.includes(w.ar));
+const Row=({a,i,f})=>html`<div class="lr"><span class="idx">${String(i+1).padStart(2,'0')}</span><a class="nm" onClick=${()=>go('artist-'+a.id)}>${a.n}</a><span class="meta">${a.c} · ${a.cr}</span><button class=${'btn'+(f?' o':'')} onClick=${()=>toggle(a.id)}>${f?'Unfollow':'Follow'}</button></div>`;
+return html`<div class="w" style=${{paddingBottom:96}}><div class="ph1"><div class="eyebrow">Your circle</div><h1 style=${{marginTop:16}}>Community</h1></div>
+<div class="sec"><div class="sh"><h2>Following</h2></div>${fa.length?fa.map((a,i)=>html`<${Row} key=${a.id} a=${a} i=${i} f=${true}/>`):html`<p class="note">You are not following anyone yet. Follow artists below, or from their profiles.</p>`}
+${fw.length>0&&html`<div class="sh" style=${{marginTop:56}}><h2>Their work</h2></div><div class="grid g4">${fw.slice(0,8).map(w=>html`<${Card} key=${w.id} w=${w} go=${go}/>`)}</div>`}</div>
+<div class="sec"><div class="sh"><h2>Discover artists</h2><a class="ul" onClick=${()=>go('artists')}>Search all artists</a></div>${more.length?more.map((a,i)=>html`<${Row} key=${a.id} a=${a} i=${i} f=${false}/>`):html`<p class="note">You follow every artist here.</p>`}</div>
+<div class="sec"><div class="sh"><h2>Messages</h2></div>${msgs.length?msgs.map((x,i)=>html`<div class="lr" key=${i}><span class="idx">${String(i+1).padStart(2,'0')}</span><span><a class="nm" style=${{fontSize:18}} onClick=${()=>go('artist-'+x.to)}>To ${artist(x.to).n}</a><br/><span style=${{color:'var(--mute)'}}>${x.t}</span></span><span class="meta">Delivered</span></div>`):html`<p class="note">No messages yet. Open an artist profile and say hello.</p>`}</div></div>`}
+function About({go}){return html`<div class="w"><div class="ph1"><div class="eyebrow">About Kal-a-shiyaana</div><h1 style=${{marginTop:16,maxWidth:900}}>A home for art that is made, not manufactured.</h1></div>
+<div class="sec two"><div class="prose"><p>Kal-a-shiyaana — <i>kala</i>, art, and <i>aashiyaana</i>, a nest — began with a simple observation: some of the most compelling work in India is made in small studios, in cities and towns the art market rarely visits.</p><p>We built a place where those artists can show work properly, set their own prices, and meet the people who will live with it.</p></div>
+<div class="prose"><p>Every artist is reviewed by hand. We look for a consistent practice, a clear point of view, and the craft to back it up. We photograph nothing for you and edit nothing: what you see is what the artist sends.</p><p>Works ship insured and framed-ready, with a signed certificate. If it isn’t right on your wall, send it back within seven days.</p></div></div>
+<div class="sec"><div class="nums"><div><b>₹0</b><p class="eyebrow" style=${{marginTop:10}}>commission on works up to ₹10,000</p></div><div><b>7 days</b><p class="eyebrow" style=${{marginTop:10}}>to live with it, or return it</p></div><div><b>15%</b><p class="eyebrow" style=${{marginTop:10}}>only on works above ₹10,000</p></div></div></div>
+<div class="sec"><div class="eyebrow">How we sustain the platform</div><div class="nums" style=${{marginTop:32}}><div><h3 style=${{fontSize:26}}>01 Commission</h3><p style=${{color:'var(--mute)',marginTop:10}}>Artists selling work up to ₹10,000 pay nothing. Above that, a 15% commission gives us a steady income and keeps the door open for new artists.</p></div><div><h3 style=${{fontSize:26}}>02 Community</h3><p style=${{color:'var(--mute)',marginTop:10}}>Monthly supporters at ₹400, ₹600 or ₹800 fund the platform and earn profile perks and front-page features.</p><p style=${{marginTop:12}}><a class="ul" onClick=${()=>go('support')}>Become a supporter</a></p></div><div><h3 style=${{fontSize:26}}>03 Lean by design</h3><p style=${{color:'var(--mute)',marginTop:10}}>Recycled cardboard, paper wrap and reusable packaging. We grow through Instagram and Pinterest, not paid influencers.</p></div></div></div>
+<div class="sec" style=${{textAlign:'center'}}><h2 style=${{fontSize:'clamp(32px,5vw,60px)'}}>Make work? Let’s talk.</h2><div style=${{marginTop:32}}><button class="btn" onClick=${()=>go('join')}>Apply as an artist →</button></div></div></div>`}
+function Join({go}){const [st,setSt]=useState(0),[d,setD]=useState({n:'',e:'',c:'',m:'',b:'',l:'',pr:''});const u=k=>e=>setD({...d,[k]:e.target.value});
+const ok=[d.n&&d.e.includes('@')&&d.c,d.m&&d.b,true][st];
+if(st===3)return html`<div class="w" style=${{padding:'96px 0',maxWidth:640}}><div class="eyebrow">Application received</div><h1 style=${{fontSize:'clamp(40px,6vw,72px)',margin:'16px 0 24px'}}>Thank you, ${d.n.split(' ')[0]}.</h1><p style=${{color:'var(--mute)',fontSize:16,marginBottom:32}}>Our curators review every application by hand and will write to ${d.e} within five working days.</p><button class="btn" onClick=${()=>go('home')}>Back to home</button></div>`;
+return html`<div class="w" style=${{maxWidth:760,paddingBottom:96}}><div class="ph1"><div class="eyebrow">Artist onboarding</div><h1 style=${{marginTop:16}}>Sell your work with us.</h1></div>
+<div class="steps">${['You','Your practice','Portfolio'].map((s,i)=>html`<div key=${s} class=${i<=st?'on':''}>0${i+1} ${s}</div>`)}</div>
+<div class="form">${st===0&&html`<div class="row"><div><label>Full name</label><input value=${d.n} onChange=${u('n')}/></div><div><label>Email</label><input type="email" value=${d.e} onChange=${u('e')}/></div></div><div><label>City</label><input value=${d.c} onChange=${u('c')}/></div>`}
+${st===1&&html`<div><label>Primary medium</label><select style=${{width:'100%'}} value=${d.m} onChange=${u('m')}><option value="">Select…</option>${CATS.slice(1).map(c=>html`<option key=${c}>${c}</option>`)}</select></div><div><label>About your practice</label><textarea rows="5" value=${d.b} onChange=${u('b')}/></div><div><label>Website or Instagram (optional)</label><input value=${d.l} onChange=${u('l')}/></div>`}
+${st===2&&html`<div class="drop"><div class="serif" style=${{fontSize:24,color:'var(--ink)',marginBottom:6}}>Add 5–10 images of recent work</div>JPG or PNG, at least 2000px on the long edge. Drag in or browse.</div><div><label>Your price for a work (₹)</label><input inputMode="numeric" value=${d.pr} onChange=${u('pr')}/></div><p class="note">${+d.pr>10000?`15% commission applies. You receive ${inr(Math.round(d.pr*.85))}.`:'No commission on works up to ₹10,000 — you keep 100%.'}</p>`}
+<div style=${{display:'flex',gap:16}}>${st>0&&html`<button class="btn o" onClick=${()=>setSt(st-1)}>Back</button>`}<button class="btn" disabled=${!ok} onClick=${()=>setSt(st+1)}>${st===2?'Submit application':'Continue →'}</button></div></div></div>`}
+function Cart({items,rm,go,clear}){const [co,setCo]=useState(false),[done,setDone]=useState(null),[f,setF]=useState({n:'',e:'',a:'',c:'',z:''}),[pay,setPay]=useState('UPI');
+const tot=items.reduce((s,w)=>s+w.pr,0),u=k=>e=>setF({...f,[k]:e.target.value}),ok=f.n&&f.e.includes('@')&&f.a&&f.c&&f.z.length===6;
+if(done)return html`<div class="w" style=${{padding:'96px 0',maxWidth:640}}><div class="eyebrow">Order ${done.id}</div><h1 style=${{fontSize:'clamp(40px,6vw,72px)',margin:'16px 0 24px'}}>Your art is on its way.</h1><p style=${{color:'var(--mute)',fontSize:16,marginBottom:32}}>A confirmation has been sent to ${f.e}. ${done.n} work${done.n>1?'s':''} will be packed by the artist and shipped, insured, within 3 days. Total paid: ${inr(done.t)}.</p><button class="btn" onClick=${()=>go('explore')}>Keep exploring</button></div>`;
+if(!items.length)return html`<div class="w"><div class="empty" style=${{padding:'120px 0'}}><h1 class="serif" style=${{fontSize:56,color:'var(--ink)',marginBottom:16}}>Your cart is empty.</h1><p style=${{marginBottom:28}}>Every piece here is an original — there’s one of each.</p><button class="btn" onClick=${()=>go('explore')}>Explore works</button></div></div>`;
+return html`<div class="w"><div class="ph1"><div class="eyebrow">${co?'Checkout':'Your selection'}</div><h1 style=${{marginTop:16}}>${co?'Delivery & payment':'Cart'}</h1></div>
+<div class="cl"><div>${!co?items.map(w=>html`<div class="ci" key=${w.id}><div class="t"><${A} w=${w}/></div><div><h3>${w.t}</h3><small style=${{color:'var(--mute)'}}>${artist(w.ar).n} · ${w.sz}</small><div><a class="ul" style=${{fontSize:12}} onClick=${()=>rm(w.id)}>Remove</a></div></div><div>${inr(w.pr)}</div></div>`)
+:html`<div class="form"><div class="row"><div><label>Full name</label><input value=${f.n} onChange=${u('n')}/></div><div><label>Email</label><input type="email" value=${f.e} onChange=${u('e')}/></div></div><div><label>Address</label><input value=${f.a} onChange=${u('a')}/></div><div class="row"><div><label>City</label><input value=${f.c} onChange=${u('c')}/></div><div><label>PIN code</label><input inputMode="numeric" maxLength="6" value=${f.z} onChange=${u('z')}/></div></div>
+<div><label style=${{marginBottom:10}}>Payment</label><div class="pay">${['UPI','Card','Net banking'].map(p=>html`<button key=${p} class=${'chip'+(pay===p?' on':'')} onClick=${()=>setPay(p)}>${p}</button>`)}</div></div></div>`}</div>
+<div class="sum"><div class="eyebrow" style=${{marginBottom:12}}>Summary</div>${items.map(w=>html`<div class="l" key=${w.id}><span>${w.t}</span><span>${inr(w.pr)}</span></div>`)}<div class="l"><span>Insured shipping</span><span>Free</span></div><div class="l tt"><span>Total</span><span>${inr(tot)}</span></div>
+<div style=${{marginTop:24,display:'grid',gap:10}}>${!co?html`<button class="btn" onClick=${()=>setCo(true)}>Proceed to checkout →</button>`:html`<button class="btn" disabled=${!ok} onClick=${()=>{setDone({id:'KA-'+Math.floor(10000+Math.random()*89999),n:items.length,t:tot});clear()}}>Pay ${inr(tot)}</button><button class="btn o" onClick=${()=>setCo(false)}>Back to cart</button>`}</div>
+<p class="note">Packed in recycled cardboard and paper wrap. Sold by the artists directly. 7-day returns.</p></div></div></div>`}
+function App(){const [route,setRoute]=useState(location.hash.slice(1)||'home'),[cart,setCart]=useState([]),[sup,setSup]=useState(null),[follows,setFollows]=useState([]),[msgs,setMsgs]=useState([]),[open,setOpen]=useState(false),[toast,setToast]=useState(null);
+useEffect(()=>{const h=()=>setRoute(location.hash.slice(1)||'home');addEventListener('hashchange',h);return()=>removeEventListener('hashchange',h)},[]);
+useEffect(()=>{window.scrollTo(0,0);setOpen(false)},[route]);
+useEffect(()=>{if(toast){const t=setTimeout(()=>setToast(null),3200);return()=>clearTimeout(t)}},[toast]);
+const go=r=>{location.hash=r;setRoute(r)};const [pg,id]=[route.split('-')[0],route.split('-').slice(1).join('-')];
+const items=cart.map(i=>WORKS.find(w=>w.id===i));
+const toggle=i=>setFollows(f=>f.includes(i)?f.filter(x=>x!==i):[...f,i]),send=(i,t)=>setMsgs(m=>[{to:i,t},...m]);const add=w=>{setCart(c=>c.includes(w.id)?c:[...c,w.id]);setToast(w.t)};
+let v;if(pg==='explore')v=html`<${Explore} go=${go}/>`;else if(pg==='artists')v=html`<${Artists} go=${go}/>`;else if(pg==='artist')v=html`<${ArtistP} id=${id} go=${go}/>`;else if(pg==='artwork')v=html`<${Work} id=${id} go=${go} cart=${cart} add=${add}/>`;else if(pg==='artists')v=html`<${Artists} go=${go} follows=${follows}/>`;else if(pg==='artist')v=html`<${ArtistP} key=${id} id=${id} go=${go} follows=${follows} toggle=${toggle} send=${send}/>`;else if(pg==='community')v=html`<${Community} go=${go} follows=${follows} toggle=${toggle} msgs=${msgs}/>`;else if(pg==='artistsx')v=null;else if(pg==='support')v=html`<${Support} go=${go} sup=${sup} setSup=${setSup}/>`;else if(pg==='about')v=html`<${About} go=${go}/>`;else if(pg==='join')v=html`<${Join} go=${go}/>`;else if(pg==='cart')v=html`<${Cart} items=${items} go=${go} rm=${i=>setCart(c=>c.filter(x=>x!==i))} clear=${()=>setCart([])}/>`;else v=html`<${Home} go=${go} sup=${sup}/>`;
+const L=[['explore','Explore'],['artists','Artists'],['community','Community'],['about','About'],['support','Support us'],['join','Sell with us']];
+return html`<div><aside class="rail" onClick=${()=>go('home')}><div class="rl">${'KALA'.split('').map((c,i)=>html`<span key=${i}>${c}</span>`)}</div><div class="rs">Shiyaana — Art from Indian studios</div></aside><header><div class="w nav"><a class="logo" onClick=${()=>go('home')}>Kal<i>-a-</i>shiyaana</a>
+<nav class=${'links'+(open?' open':'')}>${L.map(([k,t])=>html`<a key=${k} class=${pg===k?'on':''} onClick=${()=>go(k)}>${t}</a>`)}</nav>
+<div style=${{display:'flex',gap:20,alignItems:'center'}}>${sup&&html`<a class="tag" onClick=${()=>go('support')}>Tier ${sup.tier} supporter</a>`}<a class="cartb" onClick=${()=>go('cart')}>Cart <b>${cart.length}</b></a><button class="burger" onClick=${()=>setOpen(!open)}>${open?'Close':'Menu'}</button></div></div></header>
+<main>${v}</main>
+<footer><div class="w fr"><div><div class="logo">Kal<i>-a-</i>shiyaana</div><p>Kala ka Aashiyaana — a creative space where art, ideas and imagination come together to create something meaningful. Find us on Instagram and Pinterest.</p></div><div class="links" style=${{display:'flex',position:'static',padding:0,border:0,background:'none',flexDirection:'row',flexWrap:'wrap'}}>${L.map(([k,t])=>html`<a key=${k} onClick=${()=>go(k)}>${t}</a>`)}</div></div></footer>
+${toast&&html`<div class="toast">Added: ${toast}<a class="ul" style=${{color:'var(--on)',borderColor:'var(--on)'}} onClick=${()=>go('cart')}>View cart</a></div>`}</div>`}
+ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`);
+</script>
+</body>
+</html>
